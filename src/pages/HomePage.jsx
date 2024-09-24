@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import bookImage1 from "../assets/book1.jpeg";
@@ -7,6 +7,15 @@ import bookImage3 from "../assets/book1.jpeg";
 import Books from "../components/Books.jsx";
 
 const HomePage = () => {
+   
+   const booksRef = useRef(null);
+   
+   const scrollToBooks = () => {
+     if (booksRef.current) {
+       booksRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+     }
+   };
+
   return (
     <div className="container justify-between items-center lg:items-start mx-auto">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-6 lg:px-12 py-12 lg:py-6">
@@ -17,7 +26,7 @@ const HomePage = () => {
         <p className="text-lg mb-6">
           Discover a world of books, explore new genres, and dive into fantastic stories tailored just for you.
         </p>
-        <button className="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition duration-300">
+        <button onClick={scrollToBooks} className="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition duration-300">
           Buy Book
         </button>
       </div>
@@ -44,7 +53,7 @@ const HomePage = () => {
       </div>
       </div>
 
-      <div className="px-12">
+      <div ref={booksRef} className="px-12">
         <Books></Books>
       </div>
     </div>
