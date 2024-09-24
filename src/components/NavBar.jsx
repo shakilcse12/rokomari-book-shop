@@ -14,7 +14,7 @@ const NavBar = () => {
       <div className="container mx-auto flex justify-between items-center">
         
       <NavLink to="/" className="text-2xl font-bold">
-          BookShop
+          Rokomari
         </NavLink>
 
         

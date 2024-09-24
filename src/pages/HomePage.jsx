@@ -9,7 +9,7 @@ import Books from "../components/Books.jsx";
 const HomePage = () => {
    
    const booksRef = useRef(null);
-   
+
    const scrollToBooks = () => {
      if (booksRef.current) {
        booksRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
