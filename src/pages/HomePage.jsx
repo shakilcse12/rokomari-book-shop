@@ -4,11 +4,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import bookImage1 from "../assets/book1.jpeg";
 import bookImage2 from "../assets/book2.jpeg";
 import bookImage3 from "../assets/book1.jpeg";
+import Books from "../components/Books.jsx";
 
 const HomePage = () => {
   return (
-    <section className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-6 lg:px-12 py-12 lg:py-12">
-      
+    <section className="flex flex-col justify-between items-center lg:items-start">
+      <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-6 lg:px-12 py-12 lg:py-12">
       <div className="lg:w-1/2 text-left mb-8 lg:mb-0 lg:pr-8">
         <h1 className="text-4xl lg:text-5xl font-bold mb-6">
           Unlock a World of Stories – Find Your Next Favorite Book at Rokomari
@@ -40,6 +41,11 @@ const HomePage = () => {
             <img src={bookImage3} alt="Book 3" className="w-full h-auto" />
           </div>
         </Carousel>
+      </div>
+      </div>
+
+      <div className="px-6 py-6">
+        <Books></Books>
       </div>
     </section>
   );
