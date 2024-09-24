@@ -3,6 +3,9 @@ import CommonLayout from './layouts/CommonLayout';
 import Homepage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import { ROUTES } from './routes';
+import FAQ from './components/Faq';
+import ABOUT from './components/About';
+import BLOG from './components/Blog';
 
 const router = createBrowserRouter([
   {
@@ -10,6 +13,9 @@ const router = createBrowserRouter([
     element: <CommonLayout />,
     children: [
       { path: ROUTES.HOME, element: <Homepage /> },
+      { path: ROUTES.FAQ, element: <FAQ /> },
+      { path: ROUTES.ABOUT, element: <ABOUT /> },
+      { path: ROUTES.BLOG, element: <BLOG /> },
     ],
   },
   { path: ROUTES.NOT_FOUND, element: <NotFoundPage /> },
