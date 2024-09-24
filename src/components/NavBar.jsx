@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { HiMenuAlt3, HiX } from "react-icons/hi"; // Importing icons for hamburger menu
+import { HiMenuAlt3, HiX } from "react-icons/hi"; 
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false); // State to toggle mobile menu
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="bg-white p-4 shadow-md">
+    <nav className="bg-white p-4 shadow-md z-10">
       <div className="container mx-auto flex justify-between items-center">
         
       <NavLink to="/" className="text-2xl font-bold">
