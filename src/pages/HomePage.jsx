@@ -8,7 +8,7 @@ import Books from "../components/Books.jsx";
 
 const HomePage = () => {
   return (
-    <section className="flex flex-col justify-between items-center lg:items-start">
+    <div className="container justify-between items-center lg:items-start mx-auto">
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-6 lg:px-12 py-12 lg:py-12">
       <div className="lg:w-1/2 text-left mb-8 lg:mb-0 lg:pr-8">
         <h1 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -44,10 +44,10 @@ const HomePage = () => {
       </div>
       </div>
 
-      <div className="px-6 py-6">
+      <div className="px-12 py-12">
         <Books></Books>
       </div>
-    </section>
+    </div>
   );
 };
 
