@@ -1,9 +1,9 @@
 import React, {useRef} from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import bookImage1 from "../assets/book1.jpeg";
-import bookImage2 from "../assets/book2.jpeg";
-import bookImage3 from "../assets/book1.jpeg";
+import bookImage1 from "../assets/book2.jpeg";
+import bookImage2 from "../assets/book4.jpeg";
+import bookImage3 from "../assets/book3.jpeg";
 import Books from "../components/Books.jsx";
 
 const HomePage = () => {

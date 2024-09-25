@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return (
     <nav className="bg-white p-4 shadow-md z-10">
-      <div className="container mx-auto flex justify-between items-center px-8">
+      <div className="container mx-auto flex justify-between items-center lg:px-8">
         
       <NavLink to={ROUTES.HOME} className="text-2xl font-bold">
           Rokomari
@@ -63,7 +63,7 @@ const NavBar = () => {
         </ul>
 
         
-        <div className={`lg:flex space-x-4 ${isOpen ? 'block' : 'hidden'} lg:block mt-4 lg:mt-0`}>
+        <div className={`lg:flex lg:space-x-4 ${isOpen ? 'block' : 'hidden'} lg:block mt-4 lg:mt-0`}>
           <button className="mr-4 px-4 py-2 bg-blue-500 text-white rounded">Buy Book</button>
           <button className="px-4 py-2 bg-gray-500 text-white rounded">Sign In</button>
         </div>
