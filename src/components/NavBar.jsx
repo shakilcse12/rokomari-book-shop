@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { HiMenuAlt3, HiX } from "react-icons/hi"; 
+import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { ROUTES } from '../routes';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +12,9 @@ const NavBar = () => {
 
   return (
     <nav className="bg-white p-4 shadow-md z-10">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center px-8">
         
-      <NavLink to="/" className="text-2xl font-bold">
+      <NavLink to={ROUTES.HOME} className="text-2xl font-bold">
           Rokomari
         </NavLink>
 
@@ -29,7 +30,7 @@ const NavBar = () => {
           <li>
             <NavLink 
               exact="true" 
-              to="/" 
+              to={ROUTES.HOME} 
               className={({ isActive }) => isActive ? "text-blue-500" : "text-gray-600"}
             >
               Home
@@ -37,7 +38,7 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink 
-              to="/about" 
+              to={ROUTES.ABOUT} 
               className={({ isActive }) => isActive ? "text-blue-500" : "text-gray-600"}
             >
               About
@@ -45,7 +46,7 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink 
-              to="/blog" 
+              to={ROUTES.BLOG} 
               className={({ isActive }) => isActive ? "text-blue-500" : "text-gray-600"}
             >
               Blog
@@ -53,7 +54,7 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink 
-              to="/faq" 
+              to={ROUTES.FAQ} 
               className={({ isActive }) => isActive ? "text-blue-500" : "text-gray-600"}
             >
               FAQ

@@ -4,7 +4,8 @@ export const ROUTES = {
     ABOUT: '/about',
     BLOG: '/blog',
     SINGLE_BOOK: {
-      STATIC: '/book/:id', // Dynamic route for book details
+      STATIC: '/book/:id', 
+      DYNAMIC: (bookId) => `/book/${bookId}`,
     },
     NOT_FOUND: '*',
   };

@@ -8,9 +8,9 @@ const BookDetailsPage = () => {
 
   useEffect(() => {
     const fetchBooks = async () => {
-      const response = await fetch('/books.json'); // Adjust path as necessary
+      const response = await fetch('/books.json'); 
       const books = await response.json();
-      const foundBook = books.find(b => b.bookId === parseInt(id)); // Ensure you use bookId to match
+      const foundBook = books.find(b => b.bookId === parseInt(id)); 
       setBook(foundBook);
     };
 
